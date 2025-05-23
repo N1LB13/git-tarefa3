@@ -27,7 +27,7 @@ git checkout main
 git stash pop
 git reflog
 git log --oneline # para pegar o hash do commit inicial
-git tag -a v1.0.0 <hash_do_commit_inicial> -m "Versao 1.0.0 - Projeto base"
-git push origin v1.0.0
+git tag -a v1.0 2fd8138 -m "Versao 1.0 - Projeto base"
+git push origin v1.0
 git add comandos.txt
 git commit -m "Adiciona comandos.txt com historico da tarefa."
