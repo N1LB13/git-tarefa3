@@ -1,0 +1,33 @@
+mkdir tarefa_git_unidade3
+cd tarefa_git_unidade3
+git init
+echo "Conteudo do arquivo 1." > arquivo1.txt
+echo "Primeira linha do arquivo 2." > arquivo2.txt
+echo "Dados importantes do arquivo 3." > arquivo3.txt
+git add .
+git commit -m "Commit inicial: Adiciona arquivos base do projeto."
+echo "Conteudo adicional para o arquivo 1." >> arquivo1.txt
+echo "Nova linha no arquivo 2. Adicao importante." >> arquivo2.txt
+git status
+git diff
+git add arquivo1.txt arquivo2.txt
+git commit -m "Atualiza arquivo1.txt e arquivo2.txt com novas informacoes."
+git log
+git log --oneline
+git log --graph --oneline --all
+git log -p
+git revert HEAD
+echo "Essa linha foi adicionada para ser 'stashed'." >> arquivo1.txt
+echo "Modificacao no arquivo 3 para stash." >> arquivo3.txt
+git status
+git stash save "Modificacoes para stash antes de mudar de contexto"
+git branch nova_feature
+git checkout nova_feature
+git checkout main
+git stash pop
+git reflog
+git log --oneline # para pegar o hash do commit inicial
+git tag -a v1.0.0 <hash_do_commit_inicial> -m "Versao 1.0.0 - Projeto base"
+git push origin v1.0.0
+git add comandos.txt
+git commit -m "Adiciona comandos.txt com historico da tarefa."
